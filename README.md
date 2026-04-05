@@ -1,2 +1,13 @@
-# frontend-interview-prep
-A curated frontend interview knowledge base with in-depth theory, optimized coding solutions, real interview questions, and quick revision notes to help crack product-based company interviews.
+# 🚀 Frontend Interview Prep
+
+> Structured, in-depth preparation for FAANG & top product-based company interviews.
+> Built topic by topic — theory, examples, and machine coding from scratch.
+
+---
+
+## 👨‍💻 Who This Is For
+
+- Frontend engineers targeting **FAANG, Atlassian, Stripe, Flipkart, Razorpay** level interviews
+- Anyone who wants to go **beyond surface-level answers** into internals, edge cases, and production thinking
+
+---
