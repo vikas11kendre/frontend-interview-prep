@@ -6,8 +6,6 @@
 ---
 
 ## 👨‍💻 Who This Is For
-
-- Frontend engineers targeting **FAANG, Atlassian, Stripe, Flipkart, Razorpay** level interviews
-- Anyone who wants to go **beyond surface-level answers** into internals, edge cases, and production thinking
+This is created for personal use for revision , once done will reshape for public use
 
 ---
