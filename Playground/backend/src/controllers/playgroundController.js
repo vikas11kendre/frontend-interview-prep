@@ -39,9 +39,24 @@ const getPollingData = (req, res) => {
   });
 };
 
+const getSse=(req,res)=>{
+  console.log("request recieved");
+    res.setHeader("Content-Type","text/event-stream");
+    res.setHeader("Cache-Control","no-cache");
+    res.setHeader("Connection","keep-alive");
+    const interval =setInterval(()=>{
+      const data= {message:"hello",time: new Date().toISOString()};
+      res.write(`data: ${JSON.stringify(data)}\n\n`)
+    },2000);
+    req.on("close",()=>{
+      clearInterval(interval)
+    })
+}
+
 module.exports = {
   getCachedData,
   longPoll,
   triggerUpdate,
   getPollingData,
+  getSse
 };

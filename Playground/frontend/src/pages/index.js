@@ -1,6 +1,7 @@
 import CsvFileAnalyser from "@/components/web-worker/csv-file-summary/CsvFileAnalyser";
 import ShortPolling from "@/components/polling/ShortPolling";
 import LongPolling from "@/components/polling/LongPolling";
+// import SSEClinet from "@/components/server-side-event/SSEClinet";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <ShortPolling />
       <LongPolling />
       <CsvFileAnalyser />
+      {/* <SSEClinet/> */}
     </div>
   );
 }
