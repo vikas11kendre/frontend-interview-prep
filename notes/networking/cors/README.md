@@ -80,15 +80,3 @@ One nuance though: for preflighted requests (PUT, DELETE, custom headers), the O
 Imagine your server dynamically sets Allow-Origin based on the incoming Origin header. Request from app.com gets Allow-Origin: app.com. Request from partner.com gets Allow-Origin: partner.com.
 Now a CDN or browser cache sits in between. app.com makes the request first — the response gets cached with Allow-Origin: app.com. Then partner.com makes the same request — the CDN serves the cached response with Allow-Origin: app.com. The browser sees a mismatch and blocks it.
 Vary: Origin tells caches: "This response changes depending on the Origin header — cache them separately." Without it, you get mysterious intermittent CORS failures that are incredibly hard to debug.
-
-
-
-
-
-
-
-“Difference between long polling and short polling?”
-
-👉 Say:
-
-“Short polling repeatedly requests data at fixed intervals, which can lead to unnecessary network calls. Long polling keeps the request open until the server has new data, reducing redundant requests and improving efficiency.”

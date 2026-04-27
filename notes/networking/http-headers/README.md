@@ -1,4 +1,4 @@
-# HTTP Headers & CORS — Interview Notes
+# HTTP Headers — Interview Notes
 
 > Every fetch request involves headers from browser → server and server → browser. Know what each does, who sets it, and what triggers CORS preflight.
 
