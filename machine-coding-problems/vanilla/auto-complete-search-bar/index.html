@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <main>
+        <div class="main-container">
+            <h1 class="heading">Google</h1>
+            <div>
+                <input aria-haspopup="listbox" aria-expanded="false" aria-controls="suggestion-container"
+                    aria-describedby="search-info" autocomplete="off" class="search-input" id="searchBar"
+                    placeholder="type to search" type="search" />
+                <span id="search-info" class="scrOnly">Type here to get the recipies</span>
+                <div role="listbox" aria-live="polite" aria-atomic="true" id="suggestion-container"></div>
+                <div role="alert" aria-live="assertive" id="display-error"></div>
+            </div>
+            <button role="search" aria-label="click here to seach the selected input"   id="search-button">Search</button>
+
+        </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+</body>

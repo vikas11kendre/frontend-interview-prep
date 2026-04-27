@@ -1,0 +1,144 @@
+.ProductCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
+  outline: none;
+}
+
+.ProductCard:hover,
+.ProductCard:focus-within {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  border-color: #9ca3af;
+}
+
+.ProductCard:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(29, 78, 216, 0.25);
+}
+
+.ProductCard__imageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ProductCard__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 300ms ease;
+}
+
+.ProductCard:hover .ProductCard__image {
+  transform: scale(1.05);
+}
+
+.ProductCard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px 18px;
+}
+
+.ProductCard__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #111827;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.35em * 2);
+}
+
+.ProductCard__description {
+  font-size: 14px;
+  line-height: 1.45;
+  color: #1f2937;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ProductCard__price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 6px 0 0;
+}
+
+.ProductCard__price::before {
+  content: "$";
+  margin-right: 1px;
+  font-weight: 600;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProductCard {
+    background: #111827;
+    border-color: #374151;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  .ProductCard:hover,
+  .ProductCard:focus-within {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    border-color: #6b7280;
+  }
+  .ProductCard:focus-visible {
+    outline-color: #93c5fd;
+    box-shadow: 0 0 0 5px rgba(147, 197, 253, 0.35);
+  }
+  .ProductCard__imageWrapper {
+    background: #0f172a;
+  }
+  .ProductCard__title {
+    color: #f9fafb;
+  }
+  .ProductCard__description {
+    color: #e5e7eb;
+  }
+  .ProductCard__price {
+    color: #f9fafb;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ProductCard,
+  .ProductCard__image {
+    transition: none;
+  }
+  .ProductCard:hover,
+  .ProductCard:focus-within {
+    transform: none;
+  }
+  .ProductCard:hover .ProductCard__image {
+    transform: none;
+  }
+}
