@@ -239,3 +239,61 @@ console.log();
 console.log("Sort:     ", topKFrequent_sort([1, 2, 1, 2, 1, 2, 3, 1, 3, 2], 2)); // [1, 2]
 console.log("Bucket:   ", topKFrequent_bucket([1, 2, 1, 2, 1, 2, 3, 1, 3, 2], 2)); // [1, 2]
 console.log("Single:   ", topKFrequent_bucket([1], 1)); // [1]
+
+
+
+
+
+
+// 560. Subarray Sum Equals K
+// Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+// A subarray is a contiguous non-empty sequence of elements within an array.
+// Example 1:
+
+// Input: nums = [1,1,1], k = 2
+// Output: 2
+// Example 2:
+
+// Input: nums = [1,2,3], k = 3
+// Output: 2
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 2 * 104
+// -1000 <= nums[i] <= 1000
+// -107 <= k <= 107
+
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var subarraySum = function(nums, k) {
+     let i=0;
+    let count=0;
+    let freq={};
+    console.log(freq)
+     while(i<nums.length){
+        let sum=0;
+        for(let j=i;j<nums.length;j++){
+            sum=sum+nums[j];
+            if(sum===k){
+                count++;
+            };
+        };
+        i++;
+
+     };
+     return count; 
+};
+
+// Frequency Counter / Multiple Pointers - areThereDuplicates
+// Implement a function called, areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in.  You can solve this using the frequency counter pattern OR the multiple pointers pattern.
+
+// Examples:
+
+// areThereDuplicates(1, 2, 3) // false
+// areThereDuplicates(1, 2, 2) // true 
+// areThereDuplicates('a', 'b', 'c', 'a') // true 
