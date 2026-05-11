@@ -1,0 +1,16 @@
+.game_board{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    margin:30px;
+    justify-content: center;
+    align-items: center;
+    min-width:400px;
+    border:1px solid black;
+}
+
+.main_container{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+}

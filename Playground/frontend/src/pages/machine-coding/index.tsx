@@ -13,6 +13,12 @@ const problems = [
     description: "Web Workers",
     difficulty: "Medium",
   },
+  {
+    slug: "tic-tac-toe",
+    title: "tic-tac-toe-game",
+    description: "Game",
+    difficulty: "Medium",
+  },
 ];
 
 export default function MachineCodingPage() {

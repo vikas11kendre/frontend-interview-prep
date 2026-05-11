@@ -1,0 +1,33 @@
+.board_grid {
+    display: grid;
+    grid-template-columns: repeat(var(--size), 48px);
+    gap: 0;
+}
+
+.board_row {
+    display: contents;
+}
+
+.grid_item {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #00339a;
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.grid_item:focus-visible {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.grid_item[aria-disabled="true"] {
+    cursor: not-allowed;
+}
